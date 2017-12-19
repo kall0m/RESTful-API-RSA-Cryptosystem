@@ -27,21 +27,21 @@ class EncryptMessagesController < ApplicationController
 	end
 
 	def show
-    message = EncryptMessage.find(params[:id])
+		message = EncryptMessage.find(params[:id])
 
 		respond_to do |format|
 			format.json {
 				render :json => {'message' => message.content}
 			}
-    end
-  end
+		end
+	end
 
 private
 	def set_message
-    @message = EncryptMessage.find(params[:id])
-  end
+		@message = EncryptMessage.find(params[:id])
+	end
 
-  def message_params
-    params.require(:message).permit(:content)
-  end
+	def message_params
+		params.require(:message).permit(:content)
+	end
 end

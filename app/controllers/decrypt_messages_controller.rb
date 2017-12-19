@@ -28,10 +28,10 @@ class DecryptMessagesController < ApplicationController
 
 private
 	def set_message
-    @message = EncryptMessage.find(params[:id])
-  end
+		@message = EncryptMessage.find(params[:id])
+	end
 
-  def message_params
-    params.require(:message).permit(:content)
-  end
+	def message_params
+		params.require(:message).permit(:content)
+	end
 end

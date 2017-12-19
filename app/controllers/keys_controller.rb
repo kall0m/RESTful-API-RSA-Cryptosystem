@@ -28,21 +28,21 @@ class KeysController < ApplicationController
 	end
 
 	def show
-    key = Key.find(params[:id])
+		key = Key.find(params[:id])
 
 		respond_to do |format|
 			format.json {
 				render :json => {'n' => key.n, 'e' => key.e, 'd' => key.d}
 			}
-    end
-  end
+		end
+	end
 
 private
 	def set_key
-    @key = Key.find(params[:id])
-  end
+		@key = Key.find(params[:id])
+	end
 
-  def key_params
-    params.require(:key).permit(:n, :e, :d)
-  end
+	def key_params
+		params.require(:key).permit(:n, :e, :d)
+	end
 end
