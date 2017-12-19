@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219185831) do
+ActiveRecord::Schema.define(version: 20171219225932) do
 
   create_table "decrypt_messages", force: :cascade do |t|
     t.text "content"
