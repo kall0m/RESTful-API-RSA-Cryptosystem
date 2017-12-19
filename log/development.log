@@ -1,0 +1,2689 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateKeys (20171218202851)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "private" integer, "public" text, "all" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171218202851"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-18 20:29:06.281843"], ["updated_at", "2017-12-18 20:29:06.281843"]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-12-18 12:46:17 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/kallom/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/kallom/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (24.6ms)
+Completed 200 OK in 149ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rsas" for 127.0.0.1 at 2017-12-18 12:46:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas?n=0&d=0&e=0" for 127.0.0.1 at 2017-12-18 12:47:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas?n=0&d=0&e=0" for 127.0.0.1 at 2017-12-18 12:47:11 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas" for 127.0.0.1 at 2017-12-18 13:29:29 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/keys" for 127.0.0.1 at 2017-12-18 13:30:00 -0800
+  
+ActionController::RoutingError (uninitialized constant KeysController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas" for 127.0.0.1 at 2017-12-18 13:30:20 -0800
+  
+ActionController::RoutingError (uninitialized constant RsasController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas/1" for 127.0.0.1 at 2017-12-18 13:30:47 -0800
+  
+ActionController::RoutingError (uninitialized constant RsasController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas" for 127.0.0.1 at 2017-12-18 13:31:10 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas/1" for 127.0.0.1 at 2017-12-18 13:31:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/messages/1" for 127.0.0.1 at 2017-12-18 13:31:32 -0800
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKey Load (0.7ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 139ms (ActiveRecord: 17.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=1):
+  
+app/controllers/messages_controller.rb:5:in `show'
+Started GET "/messages" for 127.0.0.1 at 2017-12-18 13:31:55 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for MessagesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas" for 127.0.0.1 at 2017-12-18 13:32:11 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/messages" for 127.0.0.1 at 2017-12-18 13:34:38 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for MessagesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-18 13:34:54 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/kallom/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/kallom/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (11.5ms)
+Completed 200 OK in 84ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-12-18 13:35:00 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for MessagesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/messages?n=0" for 127.0.0.1 at 2017-12-18 13:35:17 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for MessagesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/messages?n=0&d=0&e=0" for 127.0.0.1 at 2017-12-18 13:35:37 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for MessagesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/messages/1" for 127.0.0.1 at 2017-12-18 13:35:45 -0800
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKey Load (12.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 65ms (ActiveRecord: 14.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=1):
+  
+app/controllers/messages_controller.rb:5:in `show'
+Started GET "/messages" for 127.0.0.1 at 2017-12-18 13:49:59 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#index as HTML
+  [1m[36mKey Load (5.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 438ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mKey Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" LIMIT ?[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `json_response' for #<MessagesController:0x0000000003f51290>):
+  
+app/controllers/messages_controller.rb:8:in `index'
+Started GET "/messages" for 127.0.0.1 at 2017-12-18 13:51:44 -0800
+Processing by MessagesController#index as HTML
+Completed 406 Not Acceptable in 96ms
+
+
+  
+ActionController::UnknownFormat (MessagesController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/messages?n=0&e=0&d=0" for 127.0.0.1 at 2017-12-18 13:52:49 -0800
+Processing by MessagesController#index as HTML
+  Parameters: {"n"=>"0", "e"=>"0", "d"=>"0"}
+Completed 406 Not Acceptable in 53ms
+
+
+  
+ActionController::UnknownFormat (MessagesController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-19 08:03:50 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/kallom/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/kallom/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (24.5ms)
+Completed 200 OK in 84ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rsas" for 127.0.0.1 at 2017-12-19 08:03:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas" for 127.0.0.1 at 2017-12-19 08:04:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas" for 127.0.0.1 at 2017-12-19 08:09:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeAttributes (20171219163153)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219163153"]]
+  [1m[35m (18.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeAttributes (20171219163855)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "akeys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "private" integer DEFAULT NULL, "public" text DEFAULT NULL, "all" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (5.7ms)[0m  [1m[32mINSERT INTO "akeys" ("id","private","public","all","created_at","updated_at")
+                     SELECT "id","private","public","all","created_at","updated_at" FROM "keys"[0m
+  [1m[35m (7.3ms)[0m  [1m[35mDROP TABLE "keys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "private" integer DEFAULT NULL, "public" text DEFAULT NULL, "all" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "keys" ("id","private","public","all","created_at","updated_at")
+                     SELECT "id","private","public","all","created_at","updated_at" FROM "akeys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "akeys"[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TEMPORARY TABLE "akeys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "private" integer DEFAULT NULL, "public" text DEFAULT NULL, "all" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "akeys" ("id","private","public","all","created_at","updated_at")
+                     SELECT "id","private","public","all","created_at","updated_at" FROM "keys"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "keys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "private" integer DEFAULT NULL, "public" integer DEFAULT NULL, "all" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "keys" ("id","private","public","all","created_at","updated_at")
+                     SELECT "id","private","public","all","created_at","updated_at" FROM "akeys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "akeys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "akeys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "private" integer DEFAULT NULL, "public" integer DEFAULT NULL, "all" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "akeys" ("id","private","public","all","created_at","updated_at")
+                     SELECT "id","private","public","all","created_at","updated_at" FROM "keys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "keys"[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "private" integer DEFAULT NULL, "public" integer DEFAULT NULL, "all" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "keys" ("id","private","public","all","created_at","updated_at")
+                     SELECT "id","private","public","all","created_at","updated_at" FROM "akeys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "akeys"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "akeys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "n" integer DEFAULT NULL, "public" integer DEFAULT NULL, "all" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "akeys" ("id","n","public","all","created_at","updated_at")
+                     SELECT "id","private","public","all","created_at","updated_at" FROM "keys"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "keys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "n" integer DEFAULT NULL, "public" integer DEFAULT NULL, "all" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "keys" ("id","n","public","all","created_at","updated_at")
+                     SELECT "id","n","public","all","created_at","updated_at" FROM "akeys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "akeys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "akeys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "n" integer DEFAULT NULL, "e" integer DEFAULT NULL, "all" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "akeys" ("id","n","e","all","created_at","updated_at")
+                     SELECT "id","n","public","all","created_at","updated_at" FROM "keys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "keys"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "n" integer DEFAULT NULL, "e" integer DEFAULT NULL, "all" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "keys" ("id","n","e","all","created_at","updated_at")
+                     SELECT "id","n","e","all","created_at","updated_at" FROM "akeys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "akeys"[0m
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "akeys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "n" integer DEFAULT NULL, "e" integer DEFAULT NULL, "d" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "akeys" ("id","n","e","d","created_at","updated_at")
+                     SELECT "id","n","e","all","created_at","updated_at" FROM "keys"[0m
+  [1m[35m (6.6ms)[0m  [1m[35mDROP TABLE "keys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "keys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "n" integer DEFAULT NULL, "e" integer DEFAULT NULL, "d" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "keys" ("id","n","e","d","created_at","updated_at")
+                     SELECT "id","n","e","d","created_at","updated_at" FROM "akeys"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "akeys"[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219163855"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 08:54:50 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 08:58:05 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 3.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 3)):
+  
+lib/RSA.rb:5:in `initialize'
+app/controllers/keys_controller.rb:14:in `new'
+app/controllers/keys_controller.rb:14:in `create'
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 08:59:39 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 7.7ms)
+
+
+  
+NoMethodError (undefined method `save' for {:n=>27971, :e=>5, :d=>11021}:Hash):
+  
+app/controllers/keys_controller.rb:17:in `block in create'
+app/controllers/keys_controller.rb:16:in `create'
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:02:20 -0800
+  
+SyntaxError (/home/kallom/Documents/tp/RESTful-API-RSA-Cryptosystem/app/controllers/keys_controller.rb:14: syntax error, unexpected ':', expecting '}'
+		key = Key.new{n: n_e_d[0], e: n_e_d[1], d: n_e
+		                ^
+/home/kallom/Documents/tp/RESTful-API-RSA-Cryptosystem/app/controllers/keys_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+	key = Key.new{n: n_e_d[0], e: n_e_d[1], d: n_e_d[2]}
+	                             ^
+/home/kallom/Documents/tp/RESTful-API-RSA-Cryptosystem/app/controllers/keys_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+w{n: n_e_d[0], e: n_e_d[1], d: n_e_d[2]}
+                              ^
+/home/kallom/Documents/tp/RESTful-API-RSA-Cryptosystem/app/controllers/keys_controller.rb:14: syntax error, unexpected '}', expecting keyword_end
+[0], e: n_e_d[1], d: n_e_d[2]}
+                              ^):
+  
+app/controllers/keys_controller.rb:14: syntax error, unexpected ':', expecting '}'
+app/controllers/keys_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/keys_controller.rb:14: syntax error, unexpected tLABEL, expecting '='
+app/controllers/keys_controller.rb:14: syntax error, unexpected '}', expecting keyword_end
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:03:06 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (124.0ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 24553], ["e", 65537], ["d", 3113], ["created_at", "2017-12-19 17:03:07.408684"], ["updated_at", "2017-12-19 17:03:07.408684"]]
+  [1m[35m (105.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 1257ms (ActiveRecord: 261.5ms)
+
+
+  
+NameError (undefined local variable or method `rsa' for #<KeysController:0x00007fa24cafff50>):
+  
+app/controllers/keys_controller.rb:18:in `block (2 levels) in create'
+app/controllers/keys_controller.rb:16:in `create'
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:03:55 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (6.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (66.0ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 2175049], ["e", 17], ["d", 638853], ["created_at", "2017-12-19 17:03:56.153515"], ["updated_at", "2017-12-19 17:03:56.153515"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 1619ms (ActiveRecord: 86.2ms)
+
+
+  
+NameError (undefined local variable or method `rsa' for #<KeysController:0x00007fa24cb5f3b0>):
+  
+app/controllers/keys_controller.rb:18:in `block (2 levels) in create'
+app/controllers/keys_controller.rb:16:in `create'
+Started GET "/rsas" for 127.0.0.1 at 2017-12-19 09:21:11 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/rsas"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:23:19 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (58.0ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 120019], ["e", 3], ["d", 19883], ["created_at", "2017-12-19 17:23:23.101957"], ["updated_at", "2017-12-19 17:23:23.101957"]]
+  [1m[35m (641.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1979ms (Views: 184.3ms | ActiveRecord: 735.4ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:44:00 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 1321297], ["e", 65537], ["d", 20537], ["created_at", "2017-12-19 17:44:12.203162"], ["updated_at", "2017-12-19 17:44:12.203162"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 185ms (Views: 7.8ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:50:02 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 9.9ms)
+
+
+  
+NameError (uninitialized constant KeysController::Message):
+  
+app/controllers/keys_controller.rb:7:in `create'
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:50:14 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "keys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 17:50:14.315002"], ["updated_at", "2017-12-19 17:50:14.315002"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 135ms (Views: 3.2ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 09:53:56 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "keys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 17:53:57.067509"], ["updated_at", "2017-12-19 17:53:57.067509"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 44ms (Views: 0.3ms | ActiveRecord: 11.2ms)
+
+
+Started POST "/rsas?n=1&e=2&d=3" for 127.0.0.1 at 2017-12-19 09:55:08 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"1", "e"=>"2", "d"=>"3", "key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: key):
+  
+app/controllers/keys_controller.rb:37:in `key_params'
+app/controllers/keys_controller.rb:8:in `create'
+Started POST "/rsas?n=1&e=2&d=3" for 127.0.0.1 at 2017-12-19 09:58:57 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"1", "e"=>"2", "d"=>"3", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.1ms)[0m  [1m[32mINSERT INTO "keys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 17:58:57.974046"], ["updated_at", "2017-12-19 17:58:57.974046"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 400 Bad Request in 45ms (ActiveRecord: 16.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: key):
+  
+app/controllers/keys_controller.rb:42:in `key_params'
+app/controllers/keys_controller.rb:11:in `create'
+Started POST "/rsas?n=1&e=2&d=3" for 127.0.0.1 at 2017-12-19 10:01:43 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"1", "e"=>"2", "d"=>"3", "key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 2ms (ActiveRecord: 27.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: key):
+  
+app/controllers/keys_controller.rb:38:in `key_params'
+app/controllers/keys_controller.rb:9:in `create'
+Started POST "/rsas?n=1&e=2&d=3" for 127.0.0.1 at 2017-12-19 10:05:28 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"1", "e"=>"2", "d"=>"3", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "keys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 18:05:28.149664"], ["updated_at", "2017-12-19 18:05:28.149664"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 77ms (Views: 6.2ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/rsas/8" for 127.0.0.1 at 2017-12-19 10:08:56 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"8", "key"=>{}}
+  [1m[36mKey Load (2.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 343ms (Views: 1.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/rsas/7" for 127.0.0.1 at 2017-12-19 10:09:34 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"7", "key"=>{}}
+  [1m[36mKey Load (63.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 0.3ms | ActiveRecord: 63.5ms)
+
+
+Started GET "/rsas/3" for 127.0.0.1 at 2017-12-19 10:09:42 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"3", "key"=>{}}
+  [1m[36mKey Load (1.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 0.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rsas/4" for 127.0.0.1 at 2017-12-19 10:09:46 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"4", "key"=>{}}
+  [1m[36mKey Load (19.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 0.8ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/rsas/1" for 127.0.0.1 at 2017-12-19 10:09:52 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"1", "key"=>{}}
+  [1m[36mKey Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (3.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/rsas/10" for 127.0.0.1 at 2017-12-19 10:09:58 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"10", "key"=>{}}
+  [1m[36mKey Load (0.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 404 Not Found in 54ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=10):
+  
+app/controllers/keys_controller.rb:43:in `set_key'
+Started GET "/rsas/6" for 127.0.0.1 at 2017-12-19 10:10:07 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"6", "key"=>{}}
+  [1m[36mKey Load (4.8ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/rsas/5" for 127.0.0.1 at 2017-12-19 10:10:13 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"5", "key"=>{}}
+  [1m[36mKey Load (9.8ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 0.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/rsas/4" for 127.0.0.1 at 2017-12-19 10:10:17 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"4", "key"=>{}}
+  [1m[36mKey Load (4.5ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:10:27 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (10.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (28.7ms)[0m  [1m[32mINSERT INTO "keys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 18:10:27.214029"], ["updated_at", "2017-12-19 18:10:27.214029"]]
+  [1m[35m (16.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 236ms (Views: 0.6ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/rsas/9" for 127.0.0.1 at 2017-12-19 10:10:34 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"9", "key"=>{}}
+  [1m[36mKey Load (1.6ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (2.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:11:40 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "keys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 18:11:41.627650"], ["updated_at", "2017-12-19 18:11:41.627650"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 147ms (Views: 0.4ms | ActiveRecord: 59.3ms)
+
+
+Started GET "/rsas/10" for 127.0.0.1 at 2017-12-19 10:11:47 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"10", "key"=>{}}
+  [1m[36mKey Load (0.5ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:13:24 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 66019], ["e", 3], ["d", 10883], ["created_at", "2017-12-19 18:13:24.594353"], ["updated_at", "2017-12-19 18:13:24.594353"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/rsas/11" for 127.0.0.1 at 2017-12-19 10:13:29 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"11", "key"=>{}}
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `json_response' for #<KeysController:0x00000000034831b0>):
+  
+app/controllers/keys_controller.rb:26:in `show'
+Started GET "/rsas/11" for 127.0.0.1 at 2017-12-19 10:14:14 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"11", "key"=>{}}
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 1.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/rsas/10" for 127.0.0.1 at 2017-12-19 10:14:27 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"10", "key"=>{}}
+  [1m[36mKey Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rsas/11" for 127.0.0.1 at 2017-12-19 10:14:32 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"11", "key"=>{}}
+  [1m[36mKey Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:17:00 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 187ms (Views: 21.2ms | ActiveRecord: 16.7ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:17:24 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "keys" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 18:17:24.936487"], ["updated_at", "2017-12-19 18:17:24.936487"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 98ms (Views: 0.3ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/rsas/12" for 127.0.0.1 at 2017-12-19 10:17:31 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"12", "key"=>{}}
+  [1m[36mKey Load (0.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:18:21 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 1230947], ["e", 17], ["d", 36137], ["created_at", "2017-12-19 18:18:21.773848"], ["updated_at", "2017-12-19 18:18:21.773848"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 210ms (Views: 0.7ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/rsas/13" for 127.0.0.1 at 2017-12-19 10:18:27 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"13", "key"=>{}}
+  [1m[36mKey Load (5.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:20:26 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 1109683], ["e", 65537], ["d", 61773], ["created_at", "2017-12-19 18:20:26.212146"], ["updated_at", "2017-12-19 18:20:26.212146"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 57ms (Views: 3.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/rsas/14" for 127.0.0.1 at 2017-12-19 10:20:30 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"14", "key"=>{}}
+  [1m[36mKey Load (3.5ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/rsas?n=1&e=2&d=3" for 127.0.0.1 at 2017-12-19 10:20:53 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"1", "e"=>"2", "d"=>"3", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "keys" ("n", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["n", 3], ["created_at", "2017-12-19 18:20:53.214298"], ["updated_at", "2017-12-19 18:20:53.214298"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 64ms (Views: 0.2ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/rsas/15" for 127.0.0.1 at 2017-12-19 10:20:57 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"15", "key"=>{}}
+  [1m[36mKey Load (4.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/rsas?n=1&e=2&d=3" for 127.0.0.1 at 2017-12-19 10:22:15 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"1", "e"=>"2", "d"=>"3", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 1], ["e", 2], ["d", 3], ["created_at", "2017-12-19 18:22:15.989204"], ["updated_at", "2017-12-19 18:22:15.989204"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 88ms (Views: 1.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/rsas/16" for 127.0.0.1 at 2017-12-19 10:22:20 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"16", "key"=>{}}
+  [1m[36mKey Load (0.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rsas?n=893&e=17&d=413" for 127.0.0.1 at 2017-12-19 10:23:10 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"893", "e"=>"17", "d"=>"413", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 893], ["e", 17], ["d", 413], ["created_at", "2017-12-19 18:23:10.100860"], ["updated_at", "2017-12-19 18:23:10.100860"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 46ms (Views: 1.9ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/rsas/17" for 127.0.0.1 at 2017-12-19 10:23:16 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"17", "key"=>{}}
+  [1m[36mKey Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rsas?n=893&e=17&d=413" for 127.0.0.1 at 2017-12-19 10:24:01 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"893", "e"=>"17", "d"=>"413", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.3ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 893], ["e", 17], ["d", 413], ["created_at", "2017-12-19 18:24:02.014738"], ["updated_at", "2017-12-19 18:24:02.014738"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 167ms (Views: 20.4ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/rsas/18" for 127.0.0.1 at 2017-12-19 10:24:08 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"18", "key"=>{}}
+  [1m[36mKey Load (2.5ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rsas/18" for 127.0.0.1 at 2017-12-19 10:24:13 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"18", "key"=>{}}
+  [1m[36mKey Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rsas/18" for 127.0.0.1 at 2017-12-19 10:24:20 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"18", "key"=>{}}
+  [1m[36mKey Load (0.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rsas?n=893&e=17&d=413" for 127.0.0.1 at 2017-12-19 10:25:22 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"893", "e"=>"17", "d"=>"413", "key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 21ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: key):
+  
+app/controllers/keys_controller.rb:46:in `key_params'
+app/controllers/keys_controller.rb:7:in `create'
+Started POST "/rsas?n=893&e=17&d=413" for 127.0.0.1 at 2017-12-19 10:25:37 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"893", "e"=>"17", "d"=>"413", "key"=>{}}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 1ms (ActiveRecord: 24.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: key):
+  
+app/controllers/keys_controller.rb:46:in `key_params'
+app/controllers/keys_controller.rb:7:in `create'
+Started POST "/rsas?n=893&e=17&d=413" for 127.0.0.1 at 2017-12-19 10:26:25 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"893", "e"=>"17", "d"=>"413", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 893], ["e", 17], ["d", 413], ["created_at", "2017-12-19 18:26:25.408244"], ["updated_at", "2017-12-19 18:26:25.408244"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 52ms (Views: 1.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/rsas/19" for 127.0.0.1 at 2017-12-19 10:26:31 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"19", "key"=>{}}
+  [1m[36mKey Load (0.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 10:26:37 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 1229983], ["e", 17], ["d", 180553], ["created_at", "2017-12-19 18:26:37.247421"], ["updated_at", "2017-12-19 18:26:37.247421"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 32ms (Views: 0.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/rsas/20" for 127.0.0.1 at 2017-12-19 10:26:42 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"20", "key"=>{}}
+  [1m[36mKey Load (0.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMessages (20171219183304)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219183304"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDecryptMessages (20171219184744)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "decrypt_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219184744"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEncryptMessages (20171219184804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "encrypt_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219184804"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropTables (20171219185012)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.4ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "encrypt_messages" ADD "content" text[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "decrypt_messages" ADD "content" text[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219185012"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropTables (20171219185513)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "encrypt_messages"[0m
+  [1m[35m (9.2ms)[0m  [1m[35mDROP TABLE "decrypt_messages"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219185513"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEncryptMessages (20171219185825)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "encrypt_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219185825"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDecryptMessages (20171219185831)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "decrypt_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171219185831"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/rsas/20/encrypt_messages/" for 127.0.0.1 at 2017-12-19 11:08:25 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (uninitialized constant EncryptMessagesController::Message):
+  
+app/controllers/encrypt_messages_controller.rb:7:in `create'
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 11:08:50 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant EncryptMessagesController::Message):
+  
+app/controllers/encrypt_messages_controller.rb:7:in `create'
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 11:09:38 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `permit' for "\"TUES\"":String):
+  
+app/controllers/encrypt_messages_controller.rb:34:in `message_params'
+app/controllers/encrypt_messages_controller.rb:7:in `create'
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 11:11:01 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (39.6ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 19:11:01.502324"], ["updated_at", "2017-12-19 19:11:01.502324"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 256ms (Views: 12.5ms | ActiveRecord: 68.0ms)
+
+
+Started GET "/rsas/20/encrypt_messages/1" for 127.0.0.1 at 2017-12-19 11:11:22 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"1", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (39.2ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.1ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 329ms (Views: 1.4ms | ActiveRecord: 39.3ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 11:13:23 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (2.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (24.1ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 19:13:23.780425"], ["updated_at", "2017-12-19 19:13:23.780425"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 131ms (Views: 5.1ms | ActiveRecord: 30.5ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 11:16:11 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (29.3ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 19:16:13.635507"], ["updated_at", "2017-12-19 19:16:13.635507"]]
+  [1m[35m (227.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 419ms (Views: 2.3ms | ActiveRecord: 282.1ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 11:16:38 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 19:16:39.121562"], ["updated_at", "2017-12-19 19:16:39.121562"]]
+  [1m[35m (20.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 187ms (Views: 9.1ms | ActiveRecord: 61.3ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 11:20:24 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.3ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "\"TUES\""], ["created_at", "2017-12-19 19:20:26.219483"], ["updated_at", "2017-12-19 19:20:26.219483"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 118ms (Views: 5.6ms | ActiveRecord: 33.2ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 11:22:01 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (7.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (25.3ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 19:22:01.667243"], ["updated_at", "2017-12-19 19:22:01.667243"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 72ms (Views: 1.5ms | ActiveRecord: 40.2ms)
+
+
+Started GET "/rsas/20/encrypt_messages/6" for 127.0.0.1 at 2017-12-19 11:22:12 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"6", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (4.8ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.0ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 11:52:21 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.7ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 567ms (ActiveRecord: 35.1ms)
+
+
+  
+NoMethodError (undefined method `permit' for "TUES":String):
+  
+app/controllers/encrypt_messages_controller.rb:38:in `message_params'
+app/controllers/encrypt_messages_controller.rb:9:in `create'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 11:55:52 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (1.5ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 608ms (ActiveRecord: 16.5ms)
+
+
+  
+NoMethodError (undefined method `permit' for "TUES":String):
+  
+app/controllers/encrypt_messages_controller.rb:38:in `message_params'
+app/controllers/encrypt_messages_controller.rb:9:in `create'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 11:57:40 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 19:57:41.085830"], ["updated_at", "2017-12-19 19:57:41.085830"]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (6.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 149ms (Views: 9.3ms | ActiveRecord: 52.7ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:03:00 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (17.6ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 20:03:01.552798"], ["updated_at", "2017-12-19 20:03:01.552798"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 299ms (Views: 14.4ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/rsas/20/encrypt_messages/7" for 127.0.0.1 at 2017-12-19 12:03:10 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"7", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (2.3ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.0ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 1.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rsas/20/encrypt_messages/8" for 127.0.0.1 at 2017-12-19 12:03:17 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"8", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (1.8ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.0ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 7.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rsas/20/encrypt_messages/6" for 127.0.0.1 at 2017-12-19 12:03:31 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"6", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (26.9ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.0ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 0.3ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/rsas/20/encrypt_messages/5" for 127.0.0.1 at 2017-12-19 12:03:35 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"5", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (0.2ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.0ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:03:55 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.7ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 16.4ms)
+
+
+  
+NoMethodError (undefined method `permit' for "TUES":String):
+  
+app/controllers/encrypt_messages_controller.rb:38:in `message_params'
+app/controllers/encrypt_messages_controller.rb:9:in `create'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:04:49 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 20:04:51.398409"], ["updated_at", "2017-12-19 20:04:51.398409"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 314ms (Views: 23.9ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/rsas/20/encrypt_messages/9" for 127.0.0.1 at 2017-12-19 12:05:01 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"9", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (2.5ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.1ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:28:33 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `before_filter' for EncryptMessagesController:Class
+Did you mean?  before_action):
+  
+app/controllers/encrypt_messages_controller.rb:5:in `<class:EncryptMessagesController>'
+app/controllers/encrypt_messages_controller.rb:3:in `<top (required)>'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:29:05 -0800
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0x00000000037e4818>
+Did you mean?  attr_accessor):
+  
+app/models/encrypt_message.rb:2:in `<class:EncryptMessage>'
+app/models/encrypt_message.rb:1:in `<top (required)>'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:39:32 -0800
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0x00007f9c109fa4a8>
+Did you mean?  attr_accessor):
+  
+app/models/encrypt_message.rb:2:in `<class:EncryptMessage>'
+app/models/encrypt_message.rb:1:in `<top (required)>'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:40:20 -0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 28ms (ActiveRecord: 3.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=):
+  
+app/controllers/encrypt_messages_controller.rb:46:in `get_key'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:42:31 -0800
+  
+SyntaxError (/home/kallom/Documents/tp/RESTful-API-RSA-Cryptosystem/config/routes.rb:23: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+config/routes.rb:23: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:44:53 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.7ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 132ms (ActiveRecord: 14.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=):
+  
+app/controllers/encrypt_messages_controller.rb:46:in `get_key'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:45:28 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 146ms (ActiveRecord: 7.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=0):
+  
+app/controllers/encrypt_messages_controller.rb:12:in `create'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:50:40 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (1.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 348ms (ActiveRecord: 54.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=0):
+  
+app/controllers/encrypt_messages_controller.rb:12:in `create'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:51:21 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (1.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 238ms (ActiveRecord: 68.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Key with 'id'=0):
+  
+app/controllers/encrypt_messages_controller.rb:12:in `create'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:54:45 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (2.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (71.0ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 20:54:50.184670"], ["updated_at", "2017-12-19 20:54:50.184670"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1229ms (Views: 13.4ms | ActiveRecord: 127.0ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:55:26 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (1.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 20:55:26.943176"], ["updated_at", "2017-12-19 20:55:26.943176"]]
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 205ms (Views: 5.0ms | ActiveRecord: 51.5ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:55:54 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 20:55:55.288636"], ["updated_at", "2017-12-19 20:55:55.288636"]]
+  [1m[35m (36.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 175ms (Views: 2.5ms | ActiveRecord: 50.9ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 12:58:36 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.8ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (18.2ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 20:58:37.899764"], ["updated_at", "2017-12-19 20:58:37.899764"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 391ms (Views: 42.3ms | ActiveRecord: 53.4ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 13:01:30 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.7ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 21:01:32.686888"], ["updated_at", "2017-12-19 21:01:32.686888"]]
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 240ms (Views: 10.3ms | ActiveRecord: 67.0ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 13:03:28 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.8ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 21:03:29.322611"], ["updated_at", "2017-12-19 21:03:29.322611"]]
+  [1m[35m (489.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1509ms (Views: 1.2ms | ActiveRecord: 513.3ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 13:05:30 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (2.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 51.5ms)
+
+
+  
+NoMethodError (undefined method `chars' for #<EncryptMessage:0x00007fe518df4b48>
+Did you mean?  changes):
+  
+lib/RSA.rb:55:in `encrypt'
+app/controllers/encrypt_messages_controller.rb:18:in `create'
+Started POST "/rsas/20/encrypt_messages?message=TUES" for 127.0.0.1 at 2017-12-19 13:08:24 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"TUES", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (3.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TUES"], ["created_at", "2017-12-19 21:08:28.233021"], ["updated_at", "2017-12-19 21:08:28.233021"]]
+  [1m[35m (17.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1151ms (Views: 17.5ms | ActiveRecord: 104.2ms)
+
+
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 13:14:50 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (36.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (119.5ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 71189], ["e", 17], ["d", 16625], ["created_at", "2017-12-19 21:14:52.854858"], ["updated_at", "2017-12-19 21:14:52.854858"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1250ms (Views: 68.5ms | ActiveRecord: 160.9ms)
+
+
+Started GET "/rsas/21" for 127.0.0.1 at 2017-12-19 13:15:17 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"21", "key"=>{}}
+  [1m[36mKey Load (3.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.5ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 3.3ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/rsas?n=1&e=2&d=3" for 127.0.0.1 at 2017-12-19 13:15:38 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"1", "e"=>"2", "d"=>"3", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (41.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.7ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 1], ["e", 2], ["d", 3], ["created_at", "2017-12-19 21:15:38.741944"], ["updated_at", "2017-12-19 21:15:38.741944"]]
+  [1m[35m (26.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 282ms (Views: 1.6ms | ActiveRecord: 75.4ms)
+
+
+Started GET "/rsas/22" for 127.0.0.1 at 2017-12-19 13:15:47 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"22", "key"=>{}}
+  [1m[36mKey Load (0.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 13:19:17 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (35.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (16.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (116.0ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "\"TUES\""], ["created_at", "2017-12-19 21:19:19.287692"], ["updated_at", "2017-12-19 21:19:19.287692"]]
+  [1m[35m (20.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1364ms (Views: 104.1ms | ActiveRecord: 189.0ms)
+
+
+Started GET "/rsas/20/encrypt_messages/17" for 127.0.0.1 at 2017-12-19 13:24:59 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"17", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (45.3ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.6ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Completed 200 OK in 754ms (Views: 16.1ms | ActiveRecord: 45.9ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=%22TUES%22" for 127.0.0.1 at 2017-12-19 13:38:02 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"\"TUES\"", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (1.5ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (24.0ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "\"TUES\""], ["created_at", "2017-12-19 21:38:07.118859"], ["updated_at", "2017-12-19 21:38:07.118859"]]
+  [1m[35m (17.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 887ms (Views: 44.8ms | ActiveRecord: 116.4ms)
+
+
+Started GET "/rsas/20/encrypt_messages/18" for 127.0.0.1 at 2017-12-19 13:38:19 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"18", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (16.1ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.1ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 13.1ms | ActiveRecord: 16.2ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=The%20Quick%20Brown%20Fox" for 127.0.0.1 at 2017-12-19 13:40:20 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"The Quick Brown Fox", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (4.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.5ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "The Quick Brown Fox"], ["created_at", "2017-12-19 21:40:24.392372"], ["updated_at", "2017-12-19 21:40:24.392372"]]
+  [1m[35m (66.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1521ms (Views: 132.4ms | ActiveRecord: 183.0ms)
+
+
+Started GET "/rsas/20/encrypt_messages/19" for 127.0.0.1 at 2017-12-19 13:40:39 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"19", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (114.8ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.1ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+Completed 200 OK in 325ms (Views: 80.3ms | ActiveRecord: 114.9ms)
+
+
+Started GET "/rsas/20/decrypt_messages/" for 127.0.0.1 at 2017-12-19 13:41:04 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas/20/decrypt_messages"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/rsas/20/decrypt_messages/" for 127.0.0.1 at 2017-12-19 13:41:25 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"id"=>"20", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (0.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 9.2ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+lib/RSA.rb:98:in `decrypt'
+app/controllers/decrypt_messages_controller.rb:18:in `create'
+Started POST "/rsas/20/decrypt_messages/" for 127.0.0.1 at 2017-12-19 13:42:34 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"id"=>"20", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (1.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.4ms)[0m  [1m[32mINSERT INTO "decrypt_messages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-12-19 21:42:38.104667"], ["updated_at", "2017-12-19 21:42:38.104667"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 570ms (Views: 30.8ms | ActiveRecord: 70.6ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=The%20Quick%20Brown%20Fox" for 127.0.0.1 at 2017-12-19 13:43:20 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"The Quick Brown Fox", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (2.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.5ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "The Quick Brown Fox"], ["created_at", "2017-12-19 21:43:21.206875"], ["updated_at", "2017-12-19 21:43:21.206875"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1018ms (Views: 15.0ms | ActiveRecord: 101.9ms)
+
+
+Started POST "/rsas/20/encrypt_messages?message=The%20Quick%20Brown%20Fox" for 127.0.0.1 at 2017-12-19 13:44:54 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"The Quick Brown Fox", "id"=>"20", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (2.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (28.5ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "MTAwMQ==\n@MDAxMQ==\n@MTExMA==\n@MTAwMQ==\n@MA==\n|MTExMQ==\n@MTExMA==\n@MTEwMA==\n@MDEwMA==\n@MQ==\n|MTEwMA==\n@MTAxMQ==\n@MDEwMQ==\n@MDAwMQ==\n@MTE=\n|MTAwMQ==\n@MDEwMA==\n@MDAxMQ==\n@MTExMA==\n@MDExMA==\n@MQ==\n|MTExMQ==\n@MTAwMQ==\n@MDExMQ==\n@MTEwMQ==\n@MTAwMA==\n@|MTEwMQ==\n@MDEwMA==\n@MTExMQ==\n@MTAwMQ==\n@MTExMQ==\n@|MTExMA==\n@MTExMQ==\n@MDAxMQ==\n@MTAwMQ==\n@MDAw\n|MTEwMA==\n@MDEwMA==\n@MDAxMA==\n@MDAxMA==\n@MDA=\n|MTEwMQ==\n@MTAxMA==\n@MDAxMA==\n@MTExMA==\n@MDA=\n|MTAwMQ==\n@MDEwMA==\n@MDAxMQ==\n@MTExMA==\n@MDExMA==\n@MQ==\n|MTAxMA==\n@MTAxMQ==\n@MTAwMA==\n@MDAwMA==\n@MTA=\n|MTEwMA==\n@MTAwMA==\n@MDAwMQ==\n@MDExMQ==\n@MDAxMA==\n@|MTAwMQ==\n@MDAwMQ==\n@MDAxMA==\n@MTAwMA==\n@MDAx\n|MTExMQ==\n@MDExMQ==\n@MDAxMA==\n@MTExMQ==\n@MA==\n|MTEwMA==\n@MDEwMQ==\n@MDAwMA==\n@MTAwMA==\n@MTAxMQ==\n@|MTAwMQ==\n@MDEwMA==\n@MDAxMQ==\n@MTExMA==\n@MDExMA==\n@MQ==\n|MTAwMA==\n@MDAwMQ==\n@MTEwMA==\n@MDEwMA==\n@MTEwMA==\n@MA==\n|MTAwMQ==\n@MDAwMQ==\n@MDAxMA==\n@MTAwMA==\n@MDAx\n|MTAwMA==\n@MTExMA==\n@MDExMA==\n@MTAxMQ==\n@MTEwMA==\n@MA==\n"], ["created_at", "2017-12-19 21:44:58.886404"], ["updated_at", "2017-12-19 21:44:58.886404"]]
+  [1m[35m (16.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 959ms (Views: 162.6ms | ActiveRecord: 128.5ms)
+
+
+Started GET "/rsas/20/encrypt_messages/21" for 127.0.0.1 at 2017-12-19 13:45:46 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"21", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (25.1ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (1.9ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+Completed 200 OK in 279ms (Views: 22.3ms | ActiveRecord: 27.0ms)
+
+
+Started POST "/rsas/20/decrypt_messages?message=MTAwMQ==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MTAwMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MTExMA==%5Cn@MTEwMA==%5Cn@MDEwMA==%5Cn@MQ==%5Cn%7CMTEwMA==%5Cn@MTAxMQ==%5Cn@MDEwMQ==%5Cn@MDAwMQ==%5Cn@MTE=%5Cn%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MQ==%5Cn%7CMTExMQ==%5Cn@MTAwMQ==%5Cn@MDExMQ==%5Cn@MTEwMQ==%5Cn@MTAwMA==%5Cn@%7CMTEwMQ==%5Cn@MDEwMA==%5Cn@MTExMQ==%5Cn@MTAwMQ==%5Cn@MTExMQ==%5Cn@%7CMTExMA==%5Cn@MTExMQ==%5Cn@MDAxMQ==%5Cn@MTAwMQ==%5Cn@MDAw%5Cn%7CMTEwMA==%5Cn@MDEwMA==%5Cn@MDAxMA==%5Cn@MDAxMA==%5Cn@MDA=%5Cn%7CMTEwMQ==%5Cn@MTAxMA==%5Cn@MDAxMA==%5Cn@MTExMA==%5Cn@MDA=%5Cn%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MQ==%5Cn%7CMTAxMA==%5Cn@MTAxMQ==%5Cn@MTAwMA==%5Cn@MDAwMA==%5Cn@MTA=%5Cn%7CMTEwMA==%5Cn@MTAwMA==%5Cn@MDAwMQ==%5Cn@MDExMQ==%5Cn@MDAxMA==%5Cn@%7CMTAwMQ==%5Cn@MDAwMQ==%5Cn@MDAxMA==%5Cn@MTAwMA==%5Cn@MDAx%5Cn%7CMTExMQ==%5Cn@MDExMQ==%5Cn@MDAxMA==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTEwMA==%5Cn@MDEwMQ==%5Cn@MDAwMA==%5Cn@MTAwMA==%5Cn@MTAxMQ==%5Cn@%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MQ==%5Cn%7CMTAwMA==%5Cn@MDAwMQ==%5Cn@MTEwMA==%5Cn@MDEwMA==%5Cn@MTEwMA==%5Cn@MA==%5Cn%7CMTAwMQ==%5Cn@MDAwMQ==%5Cn@MDAxMA==%5Cn@MTAwMA==%5Cn@MDAx%5Cn%7CMTAwMA==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MTAxMQ==%5Cn@MTEwMA==%5Cn@MA==%5Cn" for 127.0.0.1 at 2017-12-19 13:47:51 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"message"=>"MTAwMQ==\\n@MDAxMQ==\\n@MTExMA==\\n@MTAwMQ==\\n@MA==\\n|MTExMQ==\\n@MTExMA==\\n@MTEwMA==\\n@MDEwMA==\\n@MQ==\\n|MTEwMA==\\n@MTAxMQ==\\n@MDEwMQ==\\n@MDAwMQ==\\n@MTE=\\n|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTExMQ==\\n@MTAwMQ==\\n@MDExMQ==\\n@MTEwMQ==\\n@MTAwMA==\\n@|MTEwMQ==\\n@MDEwMA==\\n@MTExMQ==\\n@MTAwMQ==\\n@MTExMQ==\\n@|MTExMA==\\n@MTExMQ==\\n@MDAxMQ==\\n@MTAwMQ==\\n@MDAw\\n|MTEwMA==\\n@MDEwMA==\\n@MDAxMA==\\n@MDAxMA==\\n@MDA=\\n|MTEwMQ==\\n@MTAxMA==\\n@MDAxMA==\\n@MTExMA==\\n@MDA=\\n|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTAxMA==\\n@MTAxMQ==\\n@MTAwMA==\\n@MDAwMA==\\n@MTA=\\n|MTEwMA==\\n@MTAwMA==\\n@MDAwMQ==\\n@MDExMQ==\\n@MDAxMA==\\n@|MTAwMQ==\\n@MDAwMQ==\\n@MDAxMA==\\n@MTAwMA==\\n@MDAx\\n|MTExMQ==\\n@MDExMQ==\\n@MDAxMA==\\n@MTExMQ==\\n@MA==\\n|MTEwMA==\\n@MDEwMQ==\\n@MDAwMA==\\n@MTAwMA==\\n@MTAxMQ==\\n@|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTAwMA==\\n@MDAwMQ==\\n@MTEwMA==\\n@MDEwMA==\\n@MTEwMA==\\n@MA==\\n|MTAwMQ==\\n@MDAwMQ==\\n@MDAxMA==\\n@MTAwMA==\\n@MDAx\\n|MTAwMA==\\n@MTExMA==\\n@MDExMA==\\n@MTAxMQ==\\n@MTEwMA==\\n@MA==\\n", "id"=>"20", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (1.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (3.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (85.0ms)[0m  [1m[32mINSERT INTO "decrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "MTAwMQ==\\n@MDAxMQ==\\n@MTExMA==\\n@MTAwMQ==\\n@MA==\\n|MTExMQ==\\n@MTExMA==\\n@MTEwMA==\\n@MDEwMA==\\n@MQ==\\n|MTEwMA==\\n@MTAxMQ==\\n@MDEwMQ==\\n@MDAwMQ==\\n@MTE=\\n|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTExMQ==\\n@MTAwMQ==\\n@MDExMQ==\\n@MTEwMQ==\\n@MTAwMA==\\n@|MTEwMQ==\\n@MDEwMA==\\n@MTExMQ==\\n@MTAwMQ==\\n@MTExMQ==\\n@|MTExMA==\\n@MTExMQ==\\n@MDAxMQ==\\n@MTAwMQ==\\n@MDAw\\n|MTEwMA==\\n@MDEwMA==\\n@MDAxMA==\\n@MDAxMA==\\n@MDA=\\n|MTEwMQ==\\n@MTAxMA==\\n@MDAxMA==\\n@MTExMA==\\n@MDA=\\n|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTAxMA==\\n@MTAxMQ==\\n@MTAwMA==\\n@MDAwMA==\\n@MTA=\\n|MTEwMA==\\n@MTAwMA==\\n@MDAwMQ==\\n@MDExMQ==\\n@MDAxMA==\\n@|MTAwMQ==\\n@MDAwMQ==\\n@MDAxMA==\\n@MTAwMA==\\n@MDAx\\n|MTExMQ==\\n@MDExMQ==\\n@MDAxMA==\\n@MTExMQ==\\n@MA==\\n|MTEwMA==\\n@MDEwMQ==\\n@MDAwMA==\\n@MTAwMA==\\n@MTAxMQ==\\n@|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTAwMA==\\n@MDAwMQ==\\n@MTEwMA==\\n@MDEwMA==\\n@MTEwMA==\\n@MA==\\n|MTAwMQ==\\n@MDAwMQ==\\n@MDAxMA==\\n@MTAwMA==\\n@MDAx\\n|MTAwMA==\\n@MTExMA==\\n@MDExMA==\\n@MTAxMQ==\\n@MTEwMA==\\n@MA==\\n"], ["created_at", "2017-12-19 21:47:53.293484"], ["updated_at", "2017-12-19 21:47:53.293484"]]
+  [1m[35m (38.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 737ms (Views: 72.0ms | ActiveRecord: 163.8ms)
+
+
+Started POST "/rsas/20/decrypt_messages?message=MTAwMQ==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MTAwMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MTExMA==%5Cn@MTEwMA==%5Cn@MDEwMA==%5Cn@MQ==%5Cn%7CMTEwMA==%5Cn@MTAxMQ==%5Cn@MDEwMQ==%5Cn@MDAwMQ==%5Cn@MTE=%5Cn%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MQ==%5Cn%7CMTExMQ==%5Cn@MTAwMQ==%5Cn@MDExMQ==%5Cn@MTEwMQ==%5Cn@MTAwMA==%5Cn@%7CMTEwMQ==%5Cn@MDEwMA==%5Cn@MTExMQ==%5Cn@MTAwMQ==%5Cn@MTExMQ==%5Cn@%7CMTExMA==%5Cn@MTExMQ==%5Cn@MDAxMQ==%5Cn@MTAwMQ==%5Cn@MDAw%5Cn%7CMTEwMA==%5Cn@MDEwMA==%5Cn@MDAxMA==%5Cn@MDAxMA==%5Cn@MDA=%5Cn%7CMTEwMQ==%5Cn@MTAxMA==%5Cn@MDAxMA==%5Cn@MTExMA==%5Cn@MDA=%5Cn%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MQ==%5Cn%7CMTAxMA==%5Cn@MTAxMQ==%5Cn@MTAwMA==%5Cn@MDAwMA==%5Cn@MTA=%5Cn%7CMTEwMA==%5Cn@MTAwMA==%5Cn@MDAwMQ==%5Cn@MDExMQ==%5Cn@MDAxMA==%5Cn@%7CMTAwMQ==%5Cn@MDAwMQ==%5Cn@MDAxMA==%5Cn@MTAwMA==%5Cn@MDAx%5Cn%7CMTExMQ==%5Cn@MDExMQ==%5Cn@MDAxMA==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTEwMA==%5Cn@MDEwMQ==%5Cn@MDAwMA==%5Cn@MTAwMA==%5Cn@MTAxMQ==%5Cn@%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MDAxMQ==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MQ==%5Cn%7CMTAwMA==%5Cn@MDAwMQ==%5Cn@MTEwMA==%5Cn@MDEwMA==%5Cn@MTEwMA==%5Cn@MA==%5Cn%7CMTAwMQ==%5Cn@MDAwMQ==%5Cn@MDAxMA==%5Cn@MTAwMA==%5Cn@MDAx%5Cn%7CMTAwMA==%5Cn@MTExMA==%5Cn@MDExMA==%5Cn@MTAxMQ==%5Cn@MTEwMA==%5Cn@MA==%5Cn" for 127.0.0.1 at 2017-12-19 13:48:33 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"message"=>"MTAwMQ==\\n@MDAxMQ==\\n@MTExMA==\\n@MTAwMQ==\\n@MA==\\n|MTExMQ==\\n@MTExMA==\\n@MTEwMA==\\n@MDEwMA==\\n@MQ==\\n|MTEwMA==\\n@MTAxMQ==\\n@MDEwMQ==\\n@MDAwMQ==\\n@MTE=\\n|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTExMQ==\\n@MTAwMQ==\\n@MDExMQ==\\n@MTEwMQ==\\n@MTAwMA==\\n@|MTEwMQ==\\n@MDEwMA==\\n@MTExMQ==\\n@MTAwMQ==\\n@MTExMQ==\\n@|MTExMA==\\n@MTExMQ==\\n@MDAxMQ==\\n@MTAwMQ==\\n@MDAw\\n|MTEwMA==\\n@MDEwMA==\\n@MDAxMA==\\n@MDAxMA==\\n@MDA=\\n|MTEwMQ==\\n@MTAxMA==\\n@MDAxMA==\\n@MTExMA==\\n@MDA=\\n|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTAxMA==\\n@MTAxMQ==\\n@MTAwMA==\\n@MDAwMA==\\n@MTA=\\n|MTEwMA==\\n@MTAwMA==\\n@MDAwMQ==\\n@MDExMQ==\\n@MDAxMA==\\n@|MTAwMQ==\\n@MDAwMQ==\\n@MDAxMA==\\n@MTAwMA==\\n@MDAx\\n|MTExMQ==\\n@MDExMQ==\\n@MDAxMA==\\n@MTExMQ==\\n@MA==\\n|MTEwMA==\\n@MDEwMQ==\\n@MDAwMA==\\n@MTAwMA==\\n@MTAxMQ==\\n@|MTAwMQ==\\n@MDEwMA==\\n@MDAxMQ==\\n@MTExMA==\\n@MDExMA==\\n@MQ==\\n|MTAwMA==\\n@MDAwMQ==\\n@MTEwMA==\\n@MDEwMA==\\n@MTEwMA==\\n@MA==\\n|MTAwMQ==\\n@MDAwMQ==\\n@MDAxMA==\\n@MTAwMA==\\n@MDAx\\n|MTAwMA==\\n@MTExMA==\\n@MDExMA==\\n@MTAxMQ==\\n@MTEwMA==\\n@MA==\\n", "id"=>"20", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (2.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (19.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (62.0ms)[0m  [1m[32mINSERT INTO "decrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "The Quick Brown Fox"], ["created_at", "2017-12-19 21:48:55.756592"], ["updated_at", "2017-12-19 21:48:55.756592"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 17843ms (Views: 2.7ms | ActiveRecord: 145.4ms)
+
+
+Started POST "/rsas?n=893&e=17&d=413" for 127.0.0.1 at 2017-12-19 13:58:09 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"893", "e"=>"17", "d"=>"413", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (25.0ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 893], ["e", 17], ["d", 413], ["created_at", "2017-12-19 21:58:16.529920"], ["updated_at", "2017-12-19 21:58:16.529920"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 800ms (Views: 35.9ms | ActiveRecord: 319.1ms)
+
+
+Started GET "/rsas/23" for 127.0.0.1 at 2017-12-19 13:58:53 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"23", "key"=>{}}
+  [1m[36mKey Load (37.7ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 11.1ms | ActiveRecord: 38.6ms)
+
+
+Started POST "/rsas/23/encrypt_message?message=4RD%20TOSHKO" for 127.0.0.1 at 2017-12-19 14:02:26 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/rsas/23/encrypt_message"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/rsas/23/encrypt_messages?message=4RD%20TOSHKO" for 127.0.0.1 at 2017-12-19 14:03:20 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"4RD TOSHKO", "id"=>"23", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (6.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.1ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "MTEwMA==\n@MTExMQ==\n@MA==\n|MTExMQ==\n@MTExMQ==\n@MA==\n|MTExMQ==\n@MDAwMQ==\n@MA==\n|MTAwMA==\n@MDEwMQ==\n@MTE=\n|MTAxMQ==\n@MDExMQ==\n@|MTExMQ==\n@MDEwMA==\n@MA==\n|MTAwMQ==\n@MDEwMA==\n@MA==\n|MTAwMA==\n@MDAwMA==\n@|MTAwMQ==\n@MDExMQ==\n@MQ==\n|MTExMQ==\n@MDEwMA==\n@MA==\n"], ["created_at", "2017-12-19 22:03:22.958782"], ["updated_at", "2017-12-19 22:03:22.958782"]]
+  [1m[35m (128.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1273ms (Views: 169.3ms | ActiveRecord: 220.0ms)
+
+
+Started GET "/rsas/23/encrypt_message/23" for 127.0.0.1 at 2017-12-19 14:04:06 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas/23/encrypt_message/23"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas/23/encrypt_message/22" for 127.0.0.1 at 2017-12-19 14:04:26 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas/23/encrypt_message/22"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas/23/encrypt_messages/22" for 127.0.0.1 at 2017-12-19 14:04:51 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"22", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (24.6ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.1ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 387ms (Views: 136.5ms | ActiveRecord: 24.7ms)
+
+
+Started POST "/rsas/23/decrypt_messages?message=MTEwMA==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MDAwMQ==%5Cn@MA==%5Cn%7CMTAwMA==%5Cn@MDEwMQ==%5Cn@MTE=%5Cn%7CMTAxMQ==%5Cn@MDExMQ==%5Cn@%7CMTExMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn%7CMTAwMA==%5Cn@MDAwMA==%5Cn@%7CMTAwMQ==%5Cn@MDExMQ==%5Cn@MQ==%5Cn%7CMTExMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn" for 127.0.0.1 at 2017-12-19 14:06:43 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"message"=>"MTEwMA==\\n@MTExMQ==\\n@MA==\\n|MTExMQ==\\n@MTExMQ==\\n@MA==\\n|MTExMQ==\\n@MDAwMQ==\\n@MA==\\n|MTAwMA==\\n@MDEwMQ==\\n@MTE=\\n|MTAxMQ==\\n@MDExMQ==\\n@|MTExMQ==\\n@MDEwMA==\\n@MA==\\n|MTAwMQ==\\n@MDEwMA==\\n@MA==\\n|MTAwMA==\\n@MDAwMA==\\n@|MTAwMQ==\\n@MDExMQ==\\n@MQ==\\n|MTExMQ==\\n@MDEwMA==\\n@MA==\\n", "id"=>"23", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (3.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 725ms (ActiveRecord: 116.7ms)
+
+
+  
+Encoding::CompatibilityError (incompatible character encodings: UTF-8 and ASCII-8BIT):
+  
+lib/RSA.rb:117:in `concat'
+lib/RSA.rb:117:in `block in decrypt'
+lib/RSA.rb:102:in `map!'
+lib/RSA.rb:102:in `decrypt'
+app/controllers/decrypt_messages_controller.rb:18:in `create'
+Started GET "/rsas/23/encrypt_messages/22" for 127.0.0.1 at 2017-12-19 14:07:49 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"22", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (9.8ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.3ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 22.3ms | ActiveRecord: 10.1ms)
+
+
+Started POST "/rsas/23/decrypt_messages?message=MTEwMA==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MDAwMQ==%5Cn@MA==%5Cn%7CMTAwMA==%5Cn@MDEwMQ==%5Cn@MTE=%5Cn%7CMTAxMQ==%5Cn@MDExMQ==%5Cn@%7CMTExMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn%7CMTAwMA==%5Cn@MDAwMA==%5Cn@%7CMTAwMQ==%5Cn@MDExMQ==%5Cn@MQ==%5Cn%7CMTExMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn" for 127.0.0.1 at 2017-12-19 14:08:10 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"message"=>"MTEwMA==\\n@MTExMQ==\\n@MA==\\n|MTExMQ==\\n@MTExMQ==\\n@MA==\\n|MTExMQ==\\n@MDAwMQ==\\n@MA==\\n|MTAwMA==\\n@MDEwMQ==\\n@MTE=\\n|MTAxMQ==\\n@MDExMQ==\\n@|MTExMQ==\\n@MDEwMA==\\n@MA==\\n|MTAwMQ==\\n@MDEwMA==\\n@MA==\\n|MTAwMA==\\n@MDAwMA==\\n@|MTAwMQ==\\n@MDExMQ==\\n@MQ==\\n|MTExMQ==\\n@MDEwMA==\\n@MA==\\n", "id"=>"23", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (11.6ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 11.6ms)
+
+
+  
+Encoding::CompatibilityError (incompatible character encodings: UTF-8 and ASCII-8BIT):
+  
+lib/RSA.rb:117:in `concat'
+lib/RSA.rb:117:in `block in decrypt'
+lib/RSA.rb:102:in `map!'
+lib/RSA.rb:102:in `decrypt'
+app/controllers/decrypt_messages_controller.rb:18:in `create'
+Started POST "/rsas?n=893&e=17&d=413" for 127.0.0.1 at 2017-12-19 14:08:41 -0800
+Processing by KeysController#create as */*
+  Parameters: {"n"=>"893", "e"=>"17", "d"=>"413", "key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (14.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (67.8ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 893], ["e", 17], ["d", 413], ["created_at", "2017-12-19 22:08:41.514380"], ["updated_at", "2017-12-19 22:08:41.514380"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 366ms (Views: 11.9ms | ActiveRecord: 90.4ms)
+
+
+Started GET "/rsas/24" for 127.0.0.1 at 2017-12-19 14:08:52 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"24", "key"=>{}}
+  [1m[36mKey Load (14.4ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.1ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 10.9ms | ActiveRecord: 14.4ms)
+
+
+Started POST "/rsas/24/encrypt_messages?message=4RD%20TOSHKO" for 127.0.0.1 at 2017-12-19 14:09:29 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"4RD TOSHKO", "id"=>"24", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (17.3ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (13.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (107.1ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "MTEwMA==\n@MTExMQ==\n@MA==\n|MTExMQ==\n@MTExMQ==\n@MA==\n|MTExMQ==\n@MDAwMQ==\n@MA==\n|MTAwMA==\n@MDEwMQ==\n@MTE=\n|MTAxMQ==\n@MDExMQ==\n@|MTExMQ==\n@MDEwMA==\n@MA==\n|MTAwMQ==\n@MDEwMA==\n@MA==\n|MTAwMA==\n@MDAwMA==\n@|MTAwMQ==\n@MDExMQ==\n@MQ==\n|MTExMQ==\n@MDEwMA==\n@MA==\n"], ["created_at", "2017-12-19 22:09:30.296602"], ["updated_at", "2017-12-19 22:09:30.296602"]]
+  [1m[35m (58.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 917ms (Views: 63.8ms | ActiveRecord: 196.3ms)
+
+
+Started GET "/rsas/24/encrypt_messages/23" for 127.0.0.1 at 2017-12-19 14:09:55 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"23", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (15.0ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.5ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 13.5ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/rsas/24/decrypt_messages?message=MTEwMA==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MTExMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MDAwMQ==%5Cn@MA==%5Cn%7CMTAwMA==%5Cn@MDEwMQ==%5Cn@MTE=%5Cn%7CMTAxMQ==%5Cn@MDExMQ==%5Cn@%7CMTExMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn%7CMTAwMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn%7CMTAwMA==%5Cn@MDAwMA==%5Cn@%7CMTAwMQ==%5Cn@MDExMQ==%5Cn@MQ==%5Cn%7CMTExMQ==%5Cn@MDEwMA==%5Cn@MA==%5Cn" for 127.0.0.1 at 2017-12-19 14:10:17 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"message"=>"MTEwMA==\\n@MTExMQ==\\n@MA==\\n|MTExMQ==\\n@MTExMQ==\\n@MA==\\n|MTExMQ==\\n@MDAwMQ==\\n@MA==\\n|MTAwMA==\\n@MDEwMQ==\\n@MTE=\\n|MTAxMQ==\\n@MDExMQ==\\n@|MTExMQ==\\n@MDEwMA==\\n@MA==\\n|MTAwMQ==\\n@MDEwMA==\\n@MA==\\n|MTAwMA==\\n@MDAwMA==\\n@|MTAwMQ==\\n@MDExMQ==\\n@MQ==\\n|MTExMQ==\\n@MDEwMA==\\n@MA==\\n", "id"=>"24", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (7.7ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 7.7ms)
+
+
+  
+Encoding::CompatibilityError (incompatible character encodings: UTF-8 and ASCII-8BIT):
+  
+lib/RSA.rb:117:in `concat'
+lib/RSA.rb:117:in `block in decrypt'
+lib/RSA.rb:102:in `map!'
+lib/RSA.rb:102:in `decrypt'
+app/controllers/decrypt_messages_controller.rb:18:in `create'
+Started POST "/rsas" for 127.0.0.1 at 2017-12-19 14:11:32 -0800
+Processing by KeysController#create as */*
+  Parameters: {"key"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[35m (30.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (115.9ms)[0m  [1m[32mINSERT INTO "keys" ("n", "e", "d", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["n", 52337], ["e", 5], ["d", 15563], ["created_at", "2017-12-19 22:11:33.258077"], ["updated_at", "2017-12-19 22:11:33.258077"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1005ms (Views: 39.6ms | ActiveRecord: 152.8ms)
+
+
+Started GET "/rsas/25" for 127.0.0.1 at 2017-12-19 14:11:47 -0800
+Processing by KeysController#show as */*
+  Parameters: {"id"=>"25", "key"=>{}}
+  [1m[36mKey Load (10.6ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE Key Load (0.0ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 3.4ms | ActiveRecord: 10.6ms)
+
+
+Started POST "/rsas/25/encrypt_messages?message=4RD%20TOSHKO" for 127.0.0.1 at 2017-12-19 14:12:13 -0800
+Processing by EncryptMessagesController#create as */*
+  Parameters: {"message"=>"4RD TOSHKO", "id"=>"25", "encrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (10.2ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (7.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (44.0ms)[0m  [1m[32mINSERT INTO "encrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "MTEwMQ==\n@MTAxMQ==\n@MDEwMA==\n@MDAw\n|MTAwMQ==\n@MDAxMQ==\n@MTAxMQ==\n@|MTAxMQ==\n@MDExMA==\n@MTExMQ==\n@MDA=\n|MTEwMA==\n@MTAwMA==\n@MDExMQ==\n@MQ==\n|MTEwMQ==\n@MDAwMQ==\n@MDAwMQ==\n@MTAx\n|MTEwMQ==\n@MTExMQ==\n@MTAxMQ==\n@MA==\n|MTExMQ==\n@MTEwMQ==\n@MDA=\n|MTAwMQ==\n@MDAxMA==\n@MDExMA==\n@MTEw\n|MTAwMA==\n@MTAwMA==\n@MTAwMA==\n@MTExMA==\n@|MTEwMQ==\n@MTExMQ==\n@MTAxMQ==\n@MA==\n"], ["created_at", "2017-12-19 22:12:13.875810"], ["updated_at", "2017-12-19 22:12:13.875810"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 305ms (Views: 15.1ms | ActiveRecord: 65.2ms)
+
+
+Started GET "/rsas/25/encrypt_messages?24" for 127.0.0.1 at 2017-12-19 14:12:38 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/rsas/25/encrypt_messages"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rsas/25/encrypt_messages/24" for 127.0.0.1 at 2017-12-19 14:12:52 -0800
+Processing by EncryptMessagesController#show as */*
+  Parameters: {"id"=>"24", "encrypt_message"=>{}}
+  [1m[36mEncryptMessage Load (11.3ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE EncryptMessage Load (0.0ms)[0m  [1m[34mSELECT  "encrypt_messages".* FROM "encrypt_messages" WHERE "encrypt_messages"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 1.9ms | ActiveRecord: 11.3ms)
+
+
+Started POST "/rsas/25/decrypt_messages?message=MTEwMQ==%5Cn@MTAxMQ==%5Cn@MDEwMA==%5Cn@MDAw%5Cn%7CMTAwMQ==%5Cn@MDAxMQ==%5Cn@MTAxMQ==%5Cn@%7CMTAxMQ==%5Cn@MDExMA==%5Cn@MTExMQ==%5Cn@MDA=%5Cn%7CMTEwMA==%5Cn@MTAwMA==%5Cn@MDExMQ==%5Cn@MQ==%5Cn%7CMTEwMQ==%5Cn@MDAwMQ==%5Cn@MDAwMQ==%5Cn@MTAx%5Cn%7CMTEwMQ==%5Cn@MTExMQ==%5Cn@MTAxMQ==%5Cn@MA==%5Cn%7CMTExMQ==%5Cn@MTEwMQ==%5Cn@MDA=%5Cn%7CMTAwMQ==%5Cn@MDAxMA==%5Cn@MDExMA==%5Cn@MTEw%5Cn%7CMTAwMA==%5Cn@MTAwMA==%5Cn@MTAwMA==%5Cn@MTExMA==%5Cn@%7CMTEwMQ==%5Cn@MTExMQ==%5Cn@MTAxMQ==%5Cn@MA==%5Cn" for 127.0.0.1 at 2017-12-19 14:13:52 -0800
+Processing by DecryptMessagesController#create as */*
+  Parameters: {"message"=>"MTEwMQ==\\n@MTAxMQ==\\n@MDEwMA==\\n@MDAw\\n|MTAwMQ==\\n@MDAxMQ==\\n@MTAxMQ==\\n@|MTAxMQ==\\n@MDExMA==\\n@MTExMQ==\\n@MDA=\\n|MTEwMA==\\n@MTAwMA==\\n@MDExMQ==\\n@MQ==\\n|MTEwMQ==\\n@MDAwMQ==\\n@MDAwMQ==\\n@MTAx\\n|MTEwMQ==\\n@MTExMQ==\\n@MTAxMQ==\\n@MA==\\n|MTExMQ==\\n@MTEwMQ==\\n@MDA=\\n|MTAwMQ==\\n@MDAxMA==\\n@MDExMA==\\n@MTEw\\n|MTAwMA==\\n@MTAwMA==\\n@MTAwMA==\\n@MTExMA==\\n@|MTEwMQ==\\n@MTExMQ==\\n@MTAxMQ==\\n@MA==\\n", "id"=>"25", "decrypt_message"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mKey Load (15.9ms)[0m  [1m[34mSELECT  "keys".* FROM "keys" WHERE "keys"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (254.3ms)[0m  [1m[32mINSERT INTO "decrypt_messages" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "4RD TOSHKO"], ["created_at", "2017-12-19 22:13:52.996603"], ["updated_at", "2017-12-19 22:13:52.996603"]]
+  [1m[35m (25.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 1279ms (Views: 144.0ms | ActiveRecord: 296.7ms)
+
+
