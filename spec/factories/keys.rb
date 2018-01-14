@@ -1,11 +1,11 @@
 # spec/factories/keys.rb
 
 FactoryGirl.define do
-  factory :key do
-    n 893
-    e 17
+	factory :key do
+		n 893
+		e 17
 		d 341
-  end
+	end
 
 	factory :empty_key, parent: :key do
 		n nil
