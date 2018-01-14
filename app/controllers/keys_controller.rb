@@ -4,13 +4,9 @@ class KeysController < ApplicationController
 	before_action :set_key, only: [:show]
 
 	def create
-		key = Key.new()
+		key = Key.new(key_params)
 
-		if(params.has_key?(:n) && params.has_key?(:e) && params.has_key?(:d))
-			key.n = params[:n]
-			key.e = params[:e]
-			key.d = params[:d]
-		else
+		if(!params.has_key?(:n) || !params.has_key?(:e) || !params.has_key?(:d))
 			keyParams = RSA.new(0, 0, 0).new_key
 
 			key.n = keyParams[0]
@@ -43,6 +39,6 @@ private
 	end
 
 	def key_params
-		params.require(:key).permit(:n, :e, :d)
+		params.permit(:n, :e, :d)
 	end
 end

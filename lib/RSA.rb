@@ -23,7 +23,7 @@ class RSA
 	def new_key
 		p, q, n, lambdaN, e, d = 0
 
-		range = rand(2000)
+		range = rand(1999)
 
 		loop do
 			p = rand(range)

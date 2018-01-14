@@ -1,37 +1,30 @@
 require "RSA"
 
 class DecryptMessagesController < ApplicationController
-	before_action :set_message, only: [:show]
-
 	def create
-		#params[:message] = {"content" => message_hash["message"]} ?
-		#message = DecryptMessage.create(message_params)
+		message = DecryptMessage.new({ :content => message_params[:message] })
 
-		message = DecryptMessage.new()
+		if message.content == nil
+			render :html => "No message"
+		else
+			key = Key.find(params[:id])
 
-		message.content = params[:message]
+			rsa = RSA.new(key.n, key.e, key.d)
 
-		key = Key.find(params[:id])
+			message.content = rsa.decrypt(message.content)
 
-		rsa = RSA.new(key.n, key.e, key.d)
-
-		message.content = rsa.decrypt(message.content)
-
-		respond_to do |format|
-			if message.save
-				format.json {
-					render :json => {'message' => message.content}
-				}
+			respond_to do |format|
+				if message.save
+					format.json {
+						render :json => {'message' => message.content}
+					}
+				end
 			end
 		end
 	end
 
 private
-	def set_message
-		@message = EncryptMessage.find(params[:id])
-	end
-
 	def message_params
-		params.require(:message).permit(:content)
+		params.permit(:message)
 	end
 end

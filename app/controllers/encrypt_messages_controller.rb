@@ -4,24 +4,23 @@ class EncryptMessagesController < ApplicationController
 	before_action :set_message, only: [:show]
 
 	def create
-		#params[:message] = {"content" => message_hash["message"]} ?
-		#message = EncryptMessage.create(message_params)
+		message = EncryptMessage.new({ :content => message_params[:message] })
 
-		message = EncryptMessage.new()
+		if message.content == nil
+			render :html => "No message"
+		else
+			key = Key.find(params[:id])
 
-		message.content = params[:message]
+			rsa = RSA.new(key.n, key.e, key.d)
 
-		key = Key.find(params[:id])
+			message.content = rsa.encrypt(message.content)
 
-		rsa = RSA.new(key.n, key.e, key.d)
-
-		message.content = rsa.encrypt(message.content)
-
-		respond_to do |format|
-			if message.save
-				format.json {
-					render :json => {'id' => message.id}
-				}
+			respond_to do |format|
+				if message.save
+					format.json {
+						render :json => {'id' => message.id}
+					}
+				end
 			end
 		end
 	end
@@ -42,6 +41,6 @@ private
 	end
 
 	def message_params
-		params.require(:message).permit(:content)
+		params.permit(:message)
 	end
 end

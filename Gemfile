@@ -45,7 +45,14 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-	gem 'rspec-rails', '~> 3.5'
+	gem 'rspec-rails'#, '~> 3.5'
+	gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'guard-rspec'
+  gem 'launchy'
 end
 
 group :development do
@@ -59,3 +66,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# SimpleCov
+gem 'simplecov', :require => false, :group => :test
+
+gem 'rails-controller-testing'
